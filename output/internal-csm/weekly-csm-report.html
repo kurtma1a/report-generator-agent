@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Weekly Analytics Report — BFC Software</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 640px; margin: 0 auto; padding: 20px; background: #f5f6f8; color: #333; }
+    .header { background: #1b2a4a; color: white; padding: 24px; }
+    .header h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+    .header .brand { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: #2ecc71; margin-bottom: 8px; }
+    .header p { opacity: 0.7; font-size: 13px; }
+    .body { background: white; padding: 24px; }
+    .summary { border-left: 4px solid #2ecc71; padding: 16px; background: #f8faf8; margin-bottom: 24px; line-height: 1.6; font-size: 14px; }
+    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #1b2a4a; margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #2ecc71; }
+    .changer { background: white; border-left: 4px solid #e74c3c; padding: 12px 16px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .changer.positive { border-left-color: #2ecc71; }
+    .changer .label { font-weight: 600; font-size: 14px; color: #1b2a4a; }
+    .changer .values { font-size: 12px; color: #888; margin-top: 2px; }
+    .changer .delta { font-size: 18px; font-weight: 700; color: #e74c3c; }
+    .changer.positive .delta { color: #2ecc71; }
+    .recs { margin-top: 12px; }
+    .recs li { margin-bottom: 10px; line-height: 1.5; font-size: 14px; }
+    .recs li strong { color: #1b2a4a; }
+    .footer { text-align: center; font-size: 11px; color: #999; margin-top: 16px; padding: 12px; border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">BFC Analytics</div>
+    <h1>Weekly Analytics Report</h1>
+    <p>April 13–19, 2026 · Internal CSM</p>
+  </div>
+  <div class="body">
+    <div class="summary">
+      Platform engagement grew strongly this week with session duration up 16.9% and active users approaching the 15% threshold. However, reliability took a significant hit — error rate doubled week-over-week and support tickets surged 67.3%, suggesting a production issue that needs immediate attention. Churn rate climbed 23.5%, which may be an early downstream effect of the reliability degradation.
+    </div>
+
+    <h2>Big Changers (≥15% WoW) — 5 of 10 metrics</h2>
+
+    <div class="changer">
+      <div>
+        <div class="label">▼ Error Rate</div>
+        <div class="values">0.9% → 1.8%</div>
+      </div>
+      <div class="delta">+100.0%</div>
+    </div>
+
+    <div class="changer">
+      <div>
+        <div class="label">▼ Support Tickets</div>
+        <div class="values">52 → 87</div>
+      </div>
+      <div class="delta">+67.3%</div>
+    </div>
+
+    <div class="changer">
+      <div>
+        <div class="label">▼ Churn Rate</div>
+        <div class="values">1.7% → 2.1%</div>
+      </div>
+      <div class="delta">+23.5%</div>
+    </div>
+
+    <div class="changer">
+      <div>
+        <div class="label">▼ P95 Latency</div>
+        <div class="values">289ms → 342ms</div>
+      </div>
+      <div class="delta">+18.3%</div>
+    </div>
+
+    <div class="changer positive">
+      <div>
+        <div class="label">▲ Session Duration</div>
+        <div class="values">7.1 min → 8.3 min</div>
+      </div>
+      <div class="delta">+16.9%</div>
+    </div>
+
+    <h2>Recommendations</h2>
+    <ul class="recs">
+      <li><strong>Investigate the error rate spike immediately.</strong> A 100% increase from 0.9% to 1.8% correlates with the 67.3% jump in support tickets and 18.3% latency increase — likely a single root cause.</li>
+      <li><strong>Monitor churn closely over the next 2 weeks.</strong> The 23.5% increase (1.7% → 2.1%) may be noise, but if it persists alongside reliability issues, it becomes a revenue risk.</li>
+      <li><strong>Celebrate the engagement wins.</strong> Session duration and active user growth are strong positive signals — ensure reliability issues don't erode this momentum.</li>
+    </ul>
+  </div>
+  <div class="footer">BFC Analytics · Internal Report</div>
+</body>
+</html>

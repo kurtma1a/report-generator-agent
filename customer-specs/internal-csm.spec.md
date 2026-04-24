@@ -5,13 +5,26 @@
 - customer_name: BFC Software — Internal Customer Success Manager
 
 ## Report Format
-- format: markdown
-- output_filename: weekly-csm-report.md
+- format: html
+- output_filename: weekly-csm-report.html
 
 ## Tone
 - style: executive
 - voice: concise, high-level, action-oriented
 - max_length: 1 page (roughly 400 words)
+
+## Visual Theme: BFC Software
+- primary_color: #1b2a4a (dark navy)
+- accent_color: #2ecc71 (green — food operations brand)
+- warning_color: #e74c3c (red for negative changers)
+- background: #f5f6f8
+- card_background: white with left border (4px solid #2ecc71)
+- header: solid dark navy (#1b2a4a) with white text, "BFC Analytics" branding
+- font: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
+- big_changer_cards: clean white cards, green left-border for positive, red left-border for negative, bold delta
+- positive_icon: ▲
+- negative_icon: ▼
+- footer: "BFC Analytics · Internal Report" in muted gray
 
 ## Sections
 Include these sections in this order:
@@ -27,8 +40,8 @@ Exclude:
 ## Highlight Rules
 - threshold: 15% week-over-week change
 - direction: both (increases and decreases)
-- label_positive: "📈 Up"
-- label_negative: "📉 Down"
+- label_positive: "▲ Up"
+- label_negative: "▼ Down"
 
 ## Delivery
 - channel: static-file

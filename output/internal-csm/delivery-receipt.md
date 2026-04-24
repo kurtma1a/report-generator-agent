@@ -5,18 +5,18 @@
 | **Customer** | BFC Software — Internal Customer Success Manager |
 | **Customer ID** | internal-csm |
 | **Channel** | static-file |
-| **File Written** | `output/internal-csm/weekly-csm-report.md` |
-| **Format** | Markdown |
+| **File Written** | `output/internal-csm/weekly-csm-report.html` |
+| **Format** | HTML (Unicorn theme) |
 | **Delivered At** | 2026-04-20T08:01:23Z |
 | **Schedule** | Weekly, Monday morning |
 | **Recipients** | Internal CSM team |
 
 ## Delivery Summary
 
-Report generated and written to static file as specified. The executive summary contains 5 big changers (≥15% threshold) with 3 actionable recommendations. Report length: ~350 words (within 1-page target).
+Unicorn-themed HTML report generated and written to static file. Executive summary with 5 big changers (≥15% threshold) and 3 actionable recommendations. Purple gradient header, sparkle accents, rounded cards.
 
 ## Pipeline Stages Completed
 
-1. ✅ **data-wrangler** — Ingested 10 metrics, computed deltas, flagged 7 big changers (at 10% base threshold)
-2. ✅ **report-stylist** — Applied internal-csm spec: executive tone, 15% threshold (5 big changers), markdown format
+1. ✅ **data-wrangler** — Ingested 10 metrics, computed deltas
+2. ✅ **report-stylist** — Applied internal-csm spec: executive tone, 15% threshold, Unicorn HTML theme
 3. ✅ **delivery-runner** — Wrote to static file, confirmed delivery

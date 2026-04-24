@@ -4,7 +4,7 @@
 
 Same data in, different reports out — controlled entirely by customer spec files, not by building separate agents per customer.
 
-This demo shows how Kiro's custom agent architecture lets BFC Software's analytics team serve multiple stakeholders (internal CSM, external customers) from a single data pipeline by swapping a spec file instead of rewriting code.
+This demo shows how Kiro's custom agent architecture lets BFC Software's analytics team serve multiple stakeholders from a single data pipeline by swapping a spec file instead of rewriting code. Both reports are HTML, but the spec controls the visual theme, tone, sections, thresholds, and delivery channel.
 
 ## Architecture
 
@@ -13,11 +13,11 @@ This demo shows how Kiro's custom agent architecture lets BFC Software's analyti
 │  Data Wrangler   │────▶│  Report Stylist               │────▶│  Delivery Runner  │
 │  (shared agent)  │     │  + customer spec file          │     │  (shared agent)   │
 │                  │     │                                │     │                   │
-│  Ingests raw     │     │  Formats output per spec:      │     │  Routes to:       │
-│  data, computes  │     │  - tone (exec vs technical)    │     │  - Slack          │
-│  week-over-week  │     │  - sections (include/exclude)  │     │  - Email          │
-│  deltas          │     │  - thresholds (15% vs 10%)     │     │  - Static file    │
-└─────────────────┘     │  - format (md, slack, email)   │     └──────────────────┘
+│  Ingests raw     │     │  Applies per-customer rules:   │     │  Routes to:       │
+│  data, computes  │     │  - visual theme & branding     │     │  - Email          │
+│  week-over-week  │     │  - tone (exec vs technical)    │     │  - Static file    │
+│  deltas          │     │  - thresholds (15% vs 10%)     │     │  - Slack          │
+└─────────────────┘     │  - sections (include/exclude)  │     └──────────────────┘
                          └──────────────────────────────┘
                                       ▲
                                       │
@@ -30,20 +30,37 @@ This demo shows how Kiro's custom agent architecture lets BFC Software's analyti
                          └───────────────────────────┘
 ```
 
+## The Two Reports
+
+| | Internal CSM | Acme Corp |
+|---|---|---|
+| **Theme** | 🦄 Unicorn — purple gradients, sparkles, rounded cards | 🏢 Corporate — dark header, striped tables, sharp edges |
+| **Tone** | Executive, concise | Technical, data-driven |
+| **Threshold** | 15% | 10% |
+| **Big Changers** | 5 | 7 |
+| **Sections** | Summary → Big Changers → Recommendations | Snapshot Table → Big Changers → Categories → Raw Data |
+| **Delivery** | Static file | Email |
+| **Output** | `output/internal-csm/weekly-csm-report.html` | `output/external-customer-a/weekly-acme-report.html` |
+
+Open both HTML files in a browser to see the visual contrast.
+
 ## File Structure
 
 ```
-demo/
 ├── agents/
 │   ├── data-wrangler.agent-spec.json      # Upstream: data ingestion + delta computation
 │   ├── report-stylist.agent-spec.json     # Middle: applies customer spec to format output
-│   └── delivery-runner.agent-spec.json    # Downstream: routes to Slack, email, or file
+│   └── delivery-runner.agent-spec.json    # Downstream: routes to delivery channel
 ├── customer-specs/
-│   ├── internal-csm.spec.md               # 1-page executive summary, 15% threshold
-│   └── external-customer-a.spec.md        # Full Slack digest, 10% threshold, @channel
+│   ├── internal-csm.spec.md               # Unicorn theme, executive, 15% threshold
+│   └── external-customer-a.spec.md        # Acme Corp theme, technical, 10% threshold
+├── output/
+│   ├── internal-csm/                      # 🦄 Unicorn-themed HTML report
+│   └── external-customer-a/               # 🏢 Acme Corp branded HTML report
 ├── sample-data/
 │   └── weekly-analytics.json              # 10 metrics with seeded big changers
-└── README.md                              # This file
+├── run-pipeline.sh                        # Runs the 3-stage pipeline for a given spec
+└── README.md
 ```
 
 ## The Key Insight
@@ -72,23 +89,28 @@ The `weekly-analytics.json` contains 10 metrics deliberately seeded to show diff
 | API Calls | +2.2% | No | No |
 | Feature Adoption | +1.8% | No | No |
 
-The internal CSM (15% threshold) sees 5 big changers.
-External Customer A (10% threshold) sees 7 big changers.
+The internal CSM (15% threshold) sees **5 big changers**.
+Acme Corp (10% threshold) sees **7 big changers**.
 
 Same data. Different reports. That's the demo.
 
-## How to Run the Demo
+## How to Run
 
-1. Point the data-wrangler at `sample-data/weekly-analytics.json`
-2. Run the report-stylist twice — once with each customer spec
-3. Compare the two outputs side by side
-4. Show that adding `customer-specs/external-customer-b.spec.md` produces a third report with zero code changes
+```bash
+# Run the pipeline for a specific customer
+./run-pipeline.sh customer-specs/internal-csm.spec.md
+./run-pipeline.sh customer-specs/external-customer-a.spec.md
 
-## Extending the Demo
+# Or use the workspace agent directly
+kiro-cli chat
+# then: /agent report-pipeline
+# then: "Run the pipeline for customer-specs/internal-csm.spec.md"
+```
 
-To add a new customer:
+## Adding a New Customer
+
 ```bash
 cp customer-specs/internal-csm.spec.md customer-specs/new-customer.spec.md
-# Edit the spec to match the new customer's preferences
-# Re-run the pipeline — done
+# Edit the spec: change the theme, tone, threshold, sections, delivery channel
+# Run the pipeline — done
 ```
