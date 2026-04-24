@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1",
+  "name": "delivery-runner",
+  "config": {
+    "description": "Routes formatted reports to the correct delivery channel (Slack, email, static file). Shared downstream agent — reads delivery preference from the customer spec.",
+    "systemPrompt": "You are a delivery routing agent. Your job is to:\n1. Read the formatted report from the report-stylist agent\n2. Read the customer spec to determine the delivery channel\n3. Route the report to the correct output: write to file, format for Slack, or prepare email body\n4. Confirm delivery with a summary of what was sent and where\n\nSupported channels: slack, email, static-file. Default to static-file if unspecified."
+  },
+  "dependencies": {},
+  "clientConfig": {
+    "kiroCli": {
+      "tools": ["read", "write", "shell"],
+      "allowedTools": ["read"]
+    }
+  }
+}

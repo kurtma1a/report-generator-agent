@@ -1,0 +1,79 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-04-20T08:00:00Z",
+    "period_current": "2026-04-13 to 2026-04-19",
+    "period_prior": "2026-04-06 to 2026-04-12"
+  },
+  "metrics": [
+    {
+      "name": "Active Users",
+      "category": "Engagement",
+      "current": 12847,
+      "prior": 11203,
+      "change_pct": 14.7
+    },
+    {
+      "name": "Session Duration (min)",
+      "category": "Engagement",
+      "current": 8.3,
+      "prior": 7.1,
+      "change_pct": 16.9
+    },
+    {
+      "name": "API Calls",
+      "category": "Usage",
+      "current": 2341000,
+      "prior": 2290000,
+      "change_pct": 2.2
+    },
+    {
+      "name": "Error Rate (%)",
+      "category": "Reliability",
+      "current": 1.8,
+      "prior": 0.9,
+      "change_pct": 100.0
+    },
+    {
+      "name": "P95 Latency (ms)",
+      "category": "Performance",
+      "current": 342,
+      "prior": 289,
+      "change_pct": 18.3
+    },
+    {
+      "name": "New Signups",
+      "category": "Growth",
+      "current": 534,
+      "prior": 612,
+      "change_pct": -12.7
+    },
+    {
+      "name": "Revenue ($)",
+      "category": "Business",
+      "current": 48750,
+      "prior": 47200,
+      "change_pct": 3.3
+    },
+    {
+      "name": "Support Tickets",
+      "category": "Support",
+      "current": 87,
+      "prior": 52,
+      "change_pct": 67.3
+    },
+    {
+      "name": "Feature Adoption — Export",
+      "category": "Product",
+      "current": 1823,
+      "prior": 1790,
+      "change_pct": 1.8
+    },
+    {
+      "name": "Churn Rate (%)",
+      "category": "Business",
+      "current": 2.1,
+      "prior": 1.7,
+      "change_pct": 23.5
+    }
+  ]
+}

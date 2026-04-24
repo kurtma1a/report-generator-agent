@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1",
+  "name": "data-wrangler",
+  "config": {
+    "description": "Ingests raw analytics data, normalizes it into structured JSON, and computes week-over-week deltas. Shared upstream agent — runs once per data refresh, output consumed by report-stylist.",
+    "systemPrompt": "You are a data processing agent. Your job is to:\n1. Read raw analytics data from the provided source\n2. Normalize it into a consistent JSON structure with metrics, dimensions, and timestamps\n3. Compute week-over-week percentage changes for every metric\n4. Flag any metric that changed more than 15% as a 'big changer'\n5. Output a structured intermediate format that downstream agents consume\n\nAlways output valid JSON. Never apply formatting or styling — that is the report-stylist's job."
+  },
+  "dependencies": {},
+  "clientConfig": {
+    "kiroCli": {
+      "tools": ["read", "write", "shell"],
+      "allowedTools": ["read"]
+    }
+  }
+}

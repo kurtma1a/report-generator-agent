@@ -1,0 +1,228 @@
+{
+  "channel": "#acme-analytics",
+  "unfurl_links": false,
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "📊 Weekly Analytics Report — Acme Corp",
+        "emoji": true
+      }
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "Period: April 13–19, 2026 | Prior: April 6–12, 2026 | Generated: April 20, 2026"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Weekly Snapshot — All Metrics*"
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Metric*"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Current → Prior (Δ)*"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Error Rate (%)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "1.8 → 0.9 (:arrow_up: *+100.0%*)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Support Tickets"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "87 → 52 (:arrow_up: *+67.3%*)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Churn Rate (%)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "2.1 → 1.7 (:arrow_up: *+23.5%*)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "P95 Latency (ms)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "342 → 289 (:arrow_up: *+18.3%*)"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "Session Duration (min)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "8.3 → 7.1 (:arrow_up: *+16.9%*)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Active Users"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "12,847 → 11,203 (:arrow_up: *+14.7%*)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "New Signups"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "534 → 612 (:arrow_down: *-12.7%*)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "Revenue ($)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "$48,750 → $47,200 (:left_right_arrow: +3.3%)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "API Calls"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "2,341,000 → 2,290,000 (:left_right_arrow: +2.2%)"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "Feature Adoption — Export"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "1,823 → 1,790 (:left_right_arrow: +1.8%)"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*:rotating_light: Big Changers (≥10% WoW) — 7 of 10 metrics flagged*\n<!channel> — Significant movements detected this week."
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": ":arrow_up: *Error Rate*\n+100.0% (0.9% → 1.8%)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":arrow_up: *Support Tickets*\n+67.3% (52 → 87)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":arrow_up: *Churn Rate*\n+23.5% (1.7% → 2.1%)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":arrow_up: *P95 Latency*\n+18.3% (289ms → 342ms)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":arrow_up: *Session Duration*\n+16.9% (7.1 → 8.3 min)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":arrow_up: *Active Users*\n+14.7% (11,203 → 12,847)"
+        },
+        {
+          "type": "mrkdwn",
+          "text": ":arrow_down: *New Signups*\n-12.7% (612 → 534)"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Category Breakdown*"
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "*Engagement* ▲▲\nActive Users +14.7%\nSession Duration +16.9%"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Reliability* ▲▲\nError Rate +100.0%\nP95 Latency +18.3%"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Business* ▲\nRevenue +3.3%\nChurn Rate +23.5%"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Support* ▲▲\nSupport Tickets +67.3%"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Growth* ▼\nNew Signups -12.7%"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "*Usage* ─\nAPI Calls +2.2%\n*Product* ─\nFeature Adoption +1.8%"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": ":link: *<https://analytics.bfcsoftware.internal/exports/2026-W16|Full Dataset Export — Week of April 13>*"
+      }
+    }
+  ]
+}
