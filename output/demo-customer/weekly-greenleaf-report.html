@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Analytics Report — 2026-04-13 to 2026-04-19</title>
+<style>
+  body { margin: 0; padding: 0; background: #f0faf4; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: #222; }
+  .header { background: #1a5632; color: #fff; padding: 24px 32px; }
+  .header h1 { margin: 0; font-size: 22px; font-weight: 600; }
+  .header p { margin: 4px 0 0; font-size: 13px; opacity: 0.85; }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+  h2 { color: #1a5632; font-size: 18px; margin: 28px 0 12px; border-bottom: 2px solid #2ecc71; padding-bottom: 6px; }
+  .summary { background: #fff; border-left: 4px solid #2ecc71; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; line-height: 1.6; }
+  .cards { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+  .card { flex: 1 1 calc(50% - 12px); min-width: 260px; background: #fff; border-radius: 8px; padding: 14px 18px; }
+  .card.positive { border-left: 4px solid #2ecc71; }
+  .card.negative { border-left: 4px solid #e67e22; }
+  .card .metric-name { font-size: 14px; color: #555; margin: 0; }
+  .card .delta { font-size: 22px; font-weight: 700; margin: 4px 0; }
+  .card .delta.up { color: #1a5632; }
+  .card .delta.down { color: #e67e22; }
+  .card .detail { font-size: 12px; color: #888; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+  thead th { background: #1a5632; color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+  tbody tr:nth-child(even) { background: #e8f5ec; }
+  tbody td { padding: 9px 12px; }
+  .tag { font-weight: 600; font-size: 13px; }
+  .tag.up { color: #1a5632; }
+  .tag.down { color: #e67e22; }
+  .tag.flat { color: #999; }
+  ul.recs { padding-left: 20px; line-height: 1.8; }
+  ul.recs li { margin-bottom: 4px; }
+  .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Greenleaf Industries — Weekly Analytics Report</h1>
+  <p>Period: 2026-04-13 to 2026-04-19 vs. 2026-04-06 to 2026-04-12</p>
+</div>
+
+<div class="container">
+
+  <h2>Executive Summary</h2>
+  <div class="summary">
+    Active Users grew 14.7% to 12,847, signaling strong engagement momentum this week.
+    However, New Signups dropped 12.7% to 534, and Churn Rate climbed 23.5% to 2.1%, creating a net growth concern.
+    Immediate attention to retention and acquisition channels is recommended to reverse the negative trends.
+  </div>
+
+  <h2>Big Changers</h2>
+  <div class="cards">
+    <div class="card negative">
+      <p class="metric-name">⚠️ Churn Rate (%)</p>
+      <p class="delta down">+23.5%</p>
+      <p class="detail">1.7 → 2.1</p>
+    </div>
+    <div class="card positive">
+      <p class="metric-name">✅ Active Users</p>
+      <p class="delta up">+14.7%</p>
+      <p class="detail">11,203 → 12,847</p>
+    </div>
+    <div class="card negative">
+      <p class="metric-name">⚠️ New Signups</p>
+      <p class="delta down">−12.7%</p>
+      <p class="detail">612 → 534</p>
+    </div>
+  </div>
+
+  <h2>Full Metrics Table</h2>
+  <table>
+    <thead>
+      <tr><th>Metric</th><th>Current</th><th>Prior</th><th>% Change</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>New Signups</td><td>534</td><td>612</td><td>−12.7%</td><td><span class="tag down">⚠️ Down</span></td></tr>
+      <tr><td>Active Users</td><td>12,847</td><td>11,203</td><td>+14.7%</td><td><span class="tag up">✅ Up</span></td></tr>
+      <tr><td>Churn Rate (%)</td><td>2.1</td><td>1.7</td><td>+23.5%</td><td><span class="tag down">⚠️ Down</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Recommendations</h2>
+  <ul class="recs">
+    <li><strong>Investigate the churn spike.</strong> A 23.5% increase in Churn Rate warrants reviewing recent customer feedback, support interactions, and any product changes that may be driving disengagement.</li>
+    <li><strong>Revive signup channels.</strong> New Signups fell 12.7% — audit campaign performance, landing page conversion, and referral pipelines to identify the drop-off.</li>
+    <li><strong>Leverage the Active Users momentum.</strong> With engagement up 14.7%, consider targeted retention campaigns to convert active users into long-term customers and offset the rising churn.</li>
+  </ul>
+
+</div>
+
+<div class="footer">Greenleaf Industries · Weekly Analytics</div>
+
+</body>
+</html>
