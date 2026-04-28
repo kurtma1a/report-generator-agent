@@ -1,3 +1,7 @@
+> **⚠️ DEMO ONLY — NOT FOR PRODUCTION USE**
+>
+> This project is provided as a demonstration and sample code only. It is not intended for production workloads. Use at your own risk. See [LICENSE](LICENSE) for terms.
+
 # Custom Agent Demo: Spec-Driven Report Generation
 
 ## What This Demonstrates
@@ -114,3 +118,11 @@ cp customer-specs/internal-csm.spec.md customer-specs/new-customer.spec.md
 # Edit the spec: change the theme, tone, threshold, sections, delivery channel
 # Run the pipeline — done
 ```
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This project is licensed under the MIT-0 License. See the [LICENSE](LICENSE) file.
